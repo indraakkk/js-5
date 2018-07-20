@@ -31,6 +31,7 @@ myFirstPromise
     })
     .catch(error => console.log(".catch >>> " + error.message))
 
+
 // ===============================================================
 // Promise advanced example
 const isMomHappy = false;
@@ -61,6 +62,7 @@ const askMom = () => {
 };
 
 askMom();
+
 
 // ===============================================================
 // Promise advanced example - indra version
@@ -96,6 +98,7 @@ const followUp = () => {
 
 followUp();
 
+
 // ===============================================================
 // Async/await
 async function myAsyncFunction() {
@@ -116,16 +119,3 @@ async function waiting() {
 waiting();
 */
 // ===============================================================
-const numberOrNot = (input) => {
-    return new Promise((resolve, reject)=>{
-        if(typeof input === "number"){
-            resolve("input is a number")
-        } else {
-            reject (Error("input is not number"))
-        }
-    })
-}
-
-numberOrNot(2).then(Response => console.log(Response)).catch(Error => console.log(Error))
-numberOrNot(3).then(Response => console.log(Response)).catch(Error => console.log(Error))
-numberOrNot(50).then(Response => console.log(Response)).catch(Error => console.log(Error));
